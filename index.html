@@ -1,1 +1,146 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Welcome</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111827;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:420px;
+background:#1f2937;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+h1{
+font-size:28px;
+margin-bottom:15px;
+}
+
+p{
+font-size:16px;
+margin-bottom:20px;
+line-height:1.5;
+}
+
+#adbox{
+margin:20px 0;
+min-height:90px;
+border:2px dashed #555;
+padding:15px;
+border-radius:10px;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:18px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:disabled{
+background:#555;
+cursor:not-allowed;
+}
+
+.timer{
+font-size:30px;
+font-weight:bold;
+margin-bottom:20px;
+color:#22c55e;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Welcome 👋</h1>
+
+<p>
+Please wait a few seconds before continuing.
+</p>
+
+<div class="timer" id="timer">4</div>
+
+<div id="adbox">
+
+<!-- Paste your official Adsterra ad code here -->
+
+<p>Your Ad Here</p>
+
+</div>
+
+<button id="continueBtn" disabled>
+Continue
+</button>
+
+</div>
+
+<script>
+
+let sec=4;
+
+const timer=document.getElementById("timer");
+
+const btn=document.getElementById("continueBtn");
+
+const x=setInterval(()=>{
+
+sec--;
+
+timer.innerHTML=sec;
+
+if(sec<=0){
+
+clearInterval(x);
+
+timer.innerHTML="✓";
+
+btn.disabled=false;
+
+}
+
+},1000);
+
+btn.onclick=function(){
+
+// Change this URL to your own page
+window.location.href="https://example.com";
+
+}
+
+</script>
+
+</body>
+</html>
