@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,39 +6,56 @@
 <title>Welcome</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
 body{
-margin:0;
-font-family:Arial,sans-serif;
 background:#0f172a;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-color:white;
+color:#fff;
 }
 
 .box{
 width:90%;
-max-width:400px;
-padding:30px;
+max-width:420px;
 background:#1e293b;
+padding:35px;
 border-radius:15px;
 text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+h1{
+font-size:34px;
+margin-bottom:20px;
+}
+
+p{
+margin-bottom:15px;
+font-size:18px;
 }
 
 button{
-padding:15px 30px;
+width:100%;
+padding:15px;
+font-size:20px;
+background:#16a34a;
+color:#fff;
 border:none;
 border-radius:10px;
-background:#22c55e;
-color:white;
-font-size:18px;
 cursor:pointer;
+transition:.3s;
 }
 
 button:hover{
-background:#16a34a;
+background:#15803d;
 }
 </style>
 
@@ -55,11 +71,15 @@ background:#16a34a;
 
 <p>Click below to continue.</p>
 
-<button onclick="window.location.href='https://www.effectivecpmnetwork.com/iwzsykqx5r?key=228b0ec1bcb02d37de8411067a1ab6a2'">
-Continue
-</button>
+<button id="continueBtn">Continue</button>
 
 </div>
+
+<script>
+document.getElementById("continueBtn").addEventListener("click", function () {
+    window.location.href = "https://www.effectivecpmnetwork.com/iwzsykqx5r?key=228b0ec1bcb02d37de8411067a1ab6a2";
+});
+</script>
 
 </body>
 </html>
